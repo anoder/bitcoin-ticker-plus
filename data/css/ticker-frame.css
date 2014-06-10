@@ -1,0 +1,84 @@
+#ticker-box {
+    color: #FFFFFF;
+    background-color: #001837;
+    line-height: 90%;
+    font-size: 14px;
+    border: 0px solid #F7912D;
+    border-radius: 25px;
+    padding: 0;
+    height: 22px;
+    line-height: 18px;
+    float: left;
+}
+#ticker-non-scalable {
+    float: left;
+}
+#ticker-img {
+    float: left;
+    width: 22px;
+    height: 22px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #F7912D;
+    overflow: hidden;
+}
+#ticker-box a:link {
+    text-decoration: none;
+}
+
+#ticker-market {
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+    /* line-height: 16px; */
+}
+#ticker-news {
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+    /* needed for scaling */
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#ticker-wallet {
+    height: 22px;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    /* line-height: 16px; */
+}
+#ticker-marquee {
+    width: 250px;
+    overflow: hidden;
+}
+.ticker-label {
+    padding-left: 3px;
+}
+.ticker-item {
+    margin-top: 2px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+.ticker-item span {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+
+
+
+.offline{
+color:#FF7777;
+margin-top: 2px;
+
+}
+.offline span{
+padding:2px;
+}
+
+.clear {
+    clear: both;
+    font-size: small;
+}
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/ticker-panel.css">
+   
+</head>
+
+<body>
+<div id="ticker-header-wrap">   
+<img id="ticker-header-img" src="img/bitcoinTickerPlus.png" />  
+</div>
+
+<div id="user-css"></div>
+<div id="ticker-box">
+<div id="ticker-market" class="pull-left"></div> <!--market -->
+<div id="ticker-news" class="pull-left"></div> <!--news -->
+ <div class="clearfix"></div>
+</div>  
+
+<div id="alert-messages"></div>      
+  <div id="options-menu">
+    <div class="panel-group" id="accordion">
+      <div class="panel  panel-custom">
+        <div id="wallet-panel-heading" class="panel-heading">
+          <h4 id="wallet-panel-title" class="panel-title">
+             
+    
+    <a id="wallet-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseWallet">
+         <span data-l10n-id="wallet_menu">Wallet  </span> <span id="wallet-panel-title-balance" class="badge"></span>
+        </a>
+      </h4>
+        </div>
+        <div id="collapseWallet" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div id="wallet-data">To display a wallet you need to add a Bitcoin Address in Preferences.</div>
+           
+          </div>
+        </div>
+      </div>
+      <div id="converter-panel" class="panel  panel-custom">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-l10n-id="converter_menu" id="converter-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseConverter">
+          Converter
+        </a>
+      </h4>
+        </div>
+        <div id="collapseConverter" class="panel-collapse collapse">
+          <div class="panel-body">
+              
+              
+            <div class="row">
+                
+              <div class="col-md-6 pull-left">
+                <div id="converter-bitcoin-currency1-wrap" class="input-group">
+                  <input id="converter-bitcoin-currency1" type="text" class="form-control" placeholder="">
+                  <span data-l10n-id="converter_btc_label" class="input-group-addon">BTC</span>
+                </div>
+              </div>
+              
+              <div class="col-md-6 pull-left">
+                <div id="converter-bitcoin-currency2-wrap" class="input-group">
+                  <input id="converter-bitcoin-currency2" type="text" class="form-control" placeholder="">
+                  <span data-l10n-id="converter_currency_label" id="converter-currency-label" data-l10n-id="default_currency" class="input-group-addon">USD</span>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              </div>
+              
+            <div id="converter-info-box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel  panel-custom">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-l10n-id="qr_menu" id="qr-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseQRCodeGenerator">
+          QR Code Generator
+        </a>
+      </h4>
+        </div>
+        <div id="collapseQRCodeGenerator" class="panel-collapse collapse">
+          <div id="qr-body" class="panel-body">
+            
+                    <div id="qr-code-bitcoin-address-wrap" class="input-group">
+                       <input id="qr-code-bitcoin-address" type="text" class="form-control" placeholder="...">
+                       <span class="input-group-btn">
+                         <button data-l10n-id="qr_gen_btn" id="qr-generate" class="btn btn-default" type="button">Generate!</button>
+                       </span>
+                    </div><!-- /input-group -->
+                  
+                  <div id="qr-code-info-box" data-l10n-id="qr_gen_help" class="small-info-box text-info"><p>Generate a QR Code for your bitcoin address, <br> (1YOURPUBLICKEY or bitcoin:1YOURPUBLICKEY) or anything you want!</p></div>
+                  <div id="qr-box">
+                      <div id="qrcode"></div>
+                      <button id="qr-save-btn" data-l10n-id="qr_save_btn" type="button" class="btn btn-primary btn-lg btn-block">Save Image</button>
+                      
+                      
+                      </div>
+              
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="panel panel-custom">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-l10n-id="pref_menu" id="preferences-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapsePreferences">
+         Preferences
+        </a>
+      </h4>
+        </div>
+        <div id="collapsePreferences" class="panel-collapse collapse">
+          <div class="panel-body">
+              <div id="preferences-body"></div>
+              <button id="reset-default" type="button" class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span> <span data-l10n-id="pref_reset_btn" >Reset</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-custom">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-l10n-id="about_menu" id="about-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseAbout">
+          About
+        </a>
+      </h4>
+        </div>
+        <div id="collapseAbout" class="panel-collapse collapse">
+          <div id="about-body" class="panel-body">
+            <p data-l10n-id="about_content">Bitcoin Ticker Plus Wallet Watcher, Currency Converter and QR Code Generator</p>
+             <p>This add-ons pricing data is Powered by <a href="http://www.coindesk.com/price/" target="_blank">CoinDesk</a>, <a href="https://blockchain.info/wallet" target="_blank">blockchain.info</a>, <a href="https://coinbase.com/" target="_blank">Coinbase.com</a>, <a href="https://bitpay.com/" target="_blank">BitPay.com</a> and <a href="https://localbitcoins.com/" target="_blank">LocalBitcoins.com</a>. You can adjust the update times in Preferences. You can add a bitcoin address to check the balance and recent transactions automatically.  Also comes with a currency converter.
+              Currency is formatted using toFixed(decimals) and toLocaleString(), results may vary. In some instances padding and rounding may occur. Converter uses 8 decimal places for BTC conversion. QR Codes are generated client-side (in browser) using <a href="https://github.com/jeromeetienne/jquery-qrcode" target="_blank" >jquery-qrcode</a>.
+             </p>
+             
+             <div id="about-list">
+             <h5>This add-on only makes requests to these URLs.</h5>
+             <ul class="list-unstyled">
+                 <li>https://blockchain.info/ticker</li>
+                 <li>https://coinbase.com/api/v1/prices/spot_rate?currency=<strong> + selected currency</strong></li>
+                 <li>https://bitpay.com/api/rates</li>
+                 <li>https://localbitcoins.com/bitcoinaverage/ticker-all-currencies/</li>
+                 <li>https://blockchain.info/address/<strong> + entered bitcoin address + </strong>?format=json</li>
+                 <li>https://api.coindesk.com/v1/bpi/currentprice/<strong> + selected currency</strong>.json</li>
+                 <li>https://ajax.googleapis.com/ajax/services/feed/load?q=http://feeds.feedburner.com/CoinDesk</li>
+                 <li>http://www.reddit.com/r/Bitcoin/.json</li>
+                 
+                 
+            </ul>
+              </div>
+
+             <p>This add-on is released under <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">
+                 GNU General Public License, version 3.0</a></p>
+             <p>Disclaimer and Terms of Use: This software is provided "as is" and is intended for informational and educational purposes only. Do not use for trading. Data may not be correct. You should always confirm current rates before making any transactions. This software is not affiliated with any of the services it uses.  The authors of this software assume no responsibility for any results or consequence of its use or for the content and links to third-party websites. This software comes with absolutely no warranty and should be used at your own risk. 
+In no event will the authors be held liable for any damages arising from the use of this software.
+</p>
+          <p class="text-center"><a id="eula_link" href="https://addons.mozilla.org/en-US/firefox/addon/bitcoin-ticker-plus/eula/" target="_blank">End-User License Agreement</a></p>   
+             
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-custom">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+        <a data-l10n-id="donate_menu" id="donate-panel-title-link" class="menu-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseDonate">
+          Donate
+        </a>
+      </h4>
+        </div>
+        <div id="collapseDonate" class="panel-collapse collapse  in">
+          <div class="panel-body">
+            <label for="options-donate"></label>
+            <input id="options-donate" type="text" class="form-control" value="1APP2TcK77tWxVGd5t5vQa4Qdd2DwMpwTX">
+         <div id="donate-img"><a href="bitcoin:1APP2TcK77tWxVGd5t5vQa4Qdd2DwMpwTX"  target="_blank"><img src="img/donate.png" width="132" height="132"/></a></div>
+         
+            <div data-l10n-id="donate_help" id="donate-info-box" class="small-info-box text-info"><p>Satoshis Accepted Here :)</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
